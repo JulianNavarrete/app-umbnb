@@ -21,7 +21,6 @@ export default function ButtonGradient () {
 
 const styles = StyleSheet.create({
     container:{
-        //flex: 1,
         width: '60%',
         alignItems: 'center',
         marginTop: 40,

@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
-import ButtonGradient from './elements/Button';
+import ButtonGradient from './components/Button';
 
 export default function App() {
   
@@ -14,12 +14,13 @@ export default function App() {
         style={styles.textInput}
         autoCapitalize='none'
         autoCompleteType='email'
-        autoCorrect='flase'
+        autoCorrect='false'
       />
       <TextInput 
         placeholder="Password"
         style={styles.textInput}
         secureTextEntry={true}
+        autoCorrect='false'
       />
       <Text style={styles.forgotPassword}>Forgot your password?</Text>
       <ButtonGradient/>
@@ -39,7 +40,6 @@ const styles = StyleSheet.create({
   umBnb:{
     fontSize: 50,
     marginBottom: 100,
-    //paddingBottom: 60,
     paddingTop: 0
   },
   title:{

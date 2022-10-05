@@ -1,21 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+import ButtonGradient from './elements/Button';
 
 export default function App() {
   
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
-      <Text style={styles.subTitle}>Sing In to your account</Text>
+      <Text style={styles.umBnb}>UM-bnb</Text>
+      <Text style={styles.subTitle}>Sign In to your account</Text>
       <TextInput 
         placeholder="user@mail.com"
         style={styles.textInput}
+        autoCapitalize='none'
+        autoCompleteType='email'
+        autoCorrect='flase'
       />
       <TextInput 
         placeholder="Password"
         style={styles.textInput}
+        secureTextEntry={true}
       />
+      <Text style={styles.forgotPassword}>Forgot your password?</Text>
+      <ButtonGradient/>
+      <Text style={styles.forgotPassword}>Don't have an account?</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -27,6 +35,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f1f1',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  umBnb:{
+    fontSize: 50,
+    marginBottom: 100,
+    //paddingBottom: 60,
+    paddingTop: 0
   },
   title:{
     fontSize: 80,
@@ -47,4 +61,9 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: '#fff',
   },
+  forgotPassword:{
+    fontSize: 14,
+    marginTop: 20,
+    color: 'grey'
+  }
 });

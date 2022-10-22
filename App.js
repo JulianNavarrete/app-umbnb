@@ -1,69 +1,51 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
-import ButtonGradient from './components/Button';
+import { StyleSheet, Text, View, TextInput, Alert, SafeAreaView } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
+const Stack = createStackNavigator()
+
+import Login from './Screens/Login';
+import Menu from './Screens/Menu';
+import CreateProperties from './Screens/CreateProperties';
+import PropertyView from './Screens/PropertyView';
+import PropertyDetails from './Screens/PropertyDetails';
+
+function MyStack(){
+  return(
+    //pantallas nuevas
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="Login" 
+        component= {Login} 
+        options={{title: 'Login' }}/>
+      <Stack.Screen 
+        name="Menu" 
+        component= {Menu} 
+        options={{title: 'Menu'}}/>
+      <Stack.Screen 
+        name="CreateProperties" 
+        component= {CreateProperties} 
+        options={{title:'New Property' }}/>
+      <Stack.Screen 
+        name="PropertyView" 
+        component= {PropertyView} 
+        options={{title:'Property View' }}/>
+      <Stack.Screen 
+        name="PropertyDetails" 
+        component= {PropertyDetails} 
+        options={{title: 'Property Details' }}/>
+    </Stack.Navigator>
+
+  )
+}
 export default function App() {
   
   return (
-    <View style={styles.container}>
-      <Text style={styles.umBnb}>UM-bnb</Text>
-      <Text style={styles.subTitle}>Sign In to your account</Text>
-      <TextInput 
-        placeholder="user@mail.com"
-        style={styles.textInput}
-        autoCapitalize='none'
-        autoCompleteType='email'
-        autoCorrect='false'
-      />
-      <TextInput 
-        placeholder="Password"
-        style={styles.textInput}
-        secureTextEntry={true}
-        autoCorrect='false'
-      />
-      <Text style={styles.forgotPassword}>Forgot your password?</Text>
-      <ButtonGradient/>
-      <Text style={styles.forgotPassword}>Don't have an account?</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <NavigationContainer>
+      <MyStack/>
+    </NavigationContainer>
+  );  
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f1f1f1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  umBnb:{
-    fontSize: 50,
-    marginBottom: 100,
-    paddingTop: 0
-  },
-  title:{
-    fontSize: 80,
-    color: '#000',
-  },
-  subTitle:{
-    fontSize: 20,
-    color: 'grey',
-    fontWeight: 'bold',
-  },
-  textInput:{
-    padding: 10,
-    paddingStart: 25,
-    width: '80%',
-    padding: 10,
-    height: 50,
-    marginTop: 20,
-    borderRadius: 30,
-    backgroundColor: '#fff',
-  },
-  forgotPassword:{
-    fontSize: 14,
-    marginTop: 20,
-    color: 'grey'
-  }
-});
+};

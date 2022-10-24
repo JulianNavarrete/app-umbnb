@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
-import { BlackButton, WhiteButton, RedButton } from '../assets/Buttons';
+import { BlackButton, WhiteButton, RedButton } from '../assets';
 
 
 

@@ -13,11 +13,13 @@ import Login from './Screens/Login';
 
 //logo casita
 //import { Ionicons } from '@expo/vector-icons';
+import MaterialComunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 //logo menu
 //import { Ionicons } from '@expo/vector-icons'; 
+//import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-import { Tab } from "react-native-elements";
+
 
 const HomeStacNavigator = createNativeStackNavigator();
 function MyStack(){
@@ -30,8 +32,8 @@ function MyStack(){
                 component={HomeScreen}
                 />
             <HomeStacNavigator.Screen
-                name="Stack"
-                component={StackScreen}
+                name="Login"
+                component={Login}
                 options={{
                     headerBackTitleVisible: false,
                 }}
@@ -52,12 +54,12 @@ function MyTabs(){
         }}
     >
     <Tab.Screen 
-      name="Login" 
+      name="Home" 
       component= {MyStack} 
       options={{
-        tabBarLabel: 'Home',
+        tabBarLabel: 'Feed',
         tabBarIcon:({ color, size}) => (
-            <Ionicons name="home" size={24} color="black" />
+            <MaterialComunityIcons name="home" color={color} size={size}/>
         ),
         headerShown: false,
       }}/>
@@ -67,7 +69,8 @@ function MyTabs(){
       options={{
         tabBarLabel: 'Menu',
         tabBarIcon:({ color, size}) => (
-            <Ionicons name="menu" size={24} color="black" />
+            <MaterialCommunityIcons name="menu" color={color} size={24} />
+            
         ),
       }}/>
   </Tab.Navigator>

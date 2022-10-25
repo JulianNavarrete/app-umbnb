@@ -16,7 +16,7 @@ const HomeScreen = () => {
                 }}
                 >HomeScreen</Text>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate("Stack")}
+                    onPress={() => navigation.navigate("Login")}
                     style={{
                         backgroundColor: "pueple",
                         padding: 10,

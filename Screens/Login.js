@@ -3,14 +3,7 @@ import { StyleSheet, Text, View, TextInput, Button,ScrollView} from 'react-nativ
 
 
 const Login = () => {
-    const [state, setState] = useState({
-        email: "",
-        pasword: "",
-    });
-        //trabajar con los valores que vamos a setear
-    const handleChangeText = (email, value) => {
-        setState({ ...state, [email]: value })
-    }
+    
     return(
     <ScrollView>
 

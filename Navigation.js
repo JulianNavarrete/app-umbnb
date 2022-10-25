@@ -21,6 +21,7 @@ import MaterialComunityIcons from 'react-native-vector-icons/MaterialCommunityIc
 
 
 
+
 const HomeStacNavigator = createNativeStackNavigator();
 function MyStack(){
     return(

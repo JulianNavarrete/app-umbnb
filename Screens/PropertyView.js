@@ -1,9 +1,9 @@
-import { QuerySnapshot, startAfter } from 'firebase/firestore';
+
 import React, {useState, useEffect} from 'react'
-import { Button, StyleSheet } from "react-native";
+import { Button, StyleSheet, ScrollView } from "react-native";
 //listar y avatar para listar
 import { ListItem, Avatar } from "react-native-elements";
-import { ScrollView } from "react-native-gesture-handler";
+
 
 import firebase from "../database/firebase";
 

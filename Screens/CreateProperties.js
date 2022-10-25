@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Button, View, StyleSheet, TextInput, ScrollView, } from 'react-native'
+import {Button, View, StyleSheet, TextInput, ScrollView } from 'react-native'
 
 import firebase from '../database/firebase'
 const AddNewProperties= (props) => {

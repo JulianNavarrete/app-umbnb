@@ -4,34 +4,28 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 //Screens
-import HomeScreen from "./Screens/HomeScreen";
-import Menu  from "./Screens/Menu";
-import LoginScreen from "./Screens/LoginScreen";
 import Init from "./Screens/Init";
+import HomeScreen from "./Screens/HomeScreen";
+import LoginScreen from "./Screens/LoginScreen";
+import Menu from "./Screens/Menu";
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+const LoginStack = createNativeStackNavigator();
+function MyStack(){
 
-const HomeStackNavigator = createNativeStackNavigator();
-function MyStack() {
-    return(
-        <HomeStackNavigator.Navigator
+        <LoginStack.Navigator
             initialRouteName="HomeScreen"
         >
-            <HomeStackNavigator.Screen
-                name="HomeScreen"
-                component={HomeScreen}
-            />
-            <HomeStackNavigator.Screen
-                name="Login"
-                component={LoginScreen}
-            />
-            <HomeStackNavigator.Screen
-                name="Init"
-                component={Init}
-            />
-        </HomeStackNavigator.Navigator>
-    )
+        <LoginStack.Screen
+            name="HomeScreen"
+            component={HomeScreen}
+        />
+        <LoginStack.Screen
+            name="Login"
+            component={LoginScreen}
+        />
+        </LoginStack.Navigator>
 }
 
 const Tab = createMaterialBottomTabNavigator();
@@ -53,20 +47,19 @@ function MyTabs() {
                         color, 
                         size
                     }) => (
-                        <MaterialCommunityIcons name="home" size={24} color="black" />
+                        <MaterialCommunityIcons name="align-vertical-distribute" size={24} color="black" />
                     ),
                     headerShown: false,
                 }}
             />
-          
+           
         </Tab.Navigator>
     );
 }
-
-export default function Navigation(){
+export default function Comienzo(){
     return(
         <NavigationContainer>
-            <MyTabs />
+            <MyTabs/>
         </NavigationContainer>
     );
 }

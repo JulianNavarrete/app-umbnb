@@ -1,7 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, TpuchnableOpacity } from "react-native";
+import { View, Text, StyleSheet, TpuchnableOpacity, Button, Alert, ScrollView  } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+
 const LoginScreen = () => {
+    const Navigation = useNavigation();
 
     return (
         <View>
@@ -11,7 +14,10 @@ const LoginScreen = () => {
                     textAlign: "center",
                     marginTop: "20%",
                 }}
-                >Login</Text>
+                >Login!!!</Text>
+                <Button
+                    title="Press me"
+                    onPress={() => Alert.alert('Button')}/> 
         </View>
     );
     }

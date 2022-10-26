@@ -10,7 +10,8 @@ const HomeScreen = () => {
 
     return (
         <View style={StyleSheet.container}>
-            <Image source={logo} style={{width:305, height: 159}}/>
+            <Image source={logo} style={{justifyContent: 'center', alignItems: 'Center' width:300, height: 400}}/>
+           
             <Text style={{
                     fontSize: 30,
                     textAlign: "center",

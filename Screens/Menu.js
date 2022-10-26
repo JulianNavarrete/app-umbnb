@@ -1,18 +1,19 @@
 import React from "react";
-import { View, Text, StyleSheet, TpuchnableOpacity } from "react-native";
+import { View, Text, StyleSheet, TpuchnableOpacity,ScrollView } from "react-native";
+
 
 const Menu = () => {
 
     return (
-        <View>
+        <ScrollView>
             <Text
                 style={{
                     fontSize: 30,
                     textAlign: "center",
                     marginTop: "20%",
                 }}
-                >Menu</Text>
-        </View>
+                >PROPERTIES</Text>
+        </ScrollView>
     );
     }
 

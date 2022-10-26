@@ -14,10 +14,11 @@ const HomeScreen = () => {
 
     return (
         <ScrollView style={StyleSheet.container}>
-            <Image source={logo} style={{ marginTop:"5%", marginLeft:"35%",width:130, height: 150}}/>
+            <Image source={logo} style={{ marginTop:"15%", marginLeft:"35%",width:130, height: 150}}/>
            
             <Text style={{ fontSize: 30,textAlign: "center",marginTop: "10%",}}>WELCOME</Text> 
-            <Text style= {{fontSize: 15, textAlign: "center", marginTop:"10%",}}>Sign In to your account</Text>
+            <Text style={{ fontSize: 30,textAlign: "center",marginTop: "5%",}}>UM-bnb</Text> 
+            <Text style= {{fontSize: 15, textAlign: "center", marginTop:"5%",}}>Sign In to your account</Text>
             <TextInput
                 placeholder="example@email.com"
                 style={styles.TextInput}

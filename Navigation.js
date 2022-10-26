@@ -14,6 +14,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const HomeStackNavigator = createNativeStackNavigator();
 function MyStack() {
+            
     return(
         <HomeStackNavigator.Navigator
             initialRouteName="HomeScreen"
@@ -21,14 +22,23 @@ function MyStack() {
             <HomeStackNavigator.Screen
                 name="HomeScreen"
                 component={HomeScreen}
+                options={{
+                    headerShown: false,
+                }}
             />
             <HomeStackNavigator.Screen
                 name="Login"
                 component={LoginScreen}
+                options={{
+                    headerShown: false,
+                }}
             />
             <HomeStackNavigator.Screen
                 name="Init"
                 component={Init}
+                options={{
+                    headerShown: false,
+                }}
             />
         </HomeStackNavigator.Navigator>
     )
@@ -40,8 +50,12 @@ function MyTabs() {
     return(
         <Tab.Navigator
         initialRouteName="Home"
+        activeColor="#f0edf6" 
+        inactiveColor="#3e2465"
+         barStyle={{ backgroundColor: '#FF3CBD' }}
         screenOptions={{
-            tabBarActiveTintColor: 'purple',
+            tabBarActiveTintColor: 'black',
+            
         }}
         >
             <Tab.Screen 

@@ -2,9 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function ButtonCreateHouse () {
+
+    
     
     return (
         <TouchableOpacity style={styles.container}>
@@ -15,6 +17,7 @@ export default function ButtonCreateHouse () {
                 end={{x: 0, y: 1}}
                 style={styles.button}
                 onPress={() => Navigation.navigate('Login')}
+                
                 >
                 <Text style={styles.text}>Create House</Text>
             </LinearGradient>
@@ -33,12 +36,12 @@ const styles = StyleSheet.create({
         marginLeft: '25%'
     },
     text:{
-        fontSize: 14,
+        fontSize: 50,
         color: 'white'
       },
     button:{
         width: '80%',
-        height: 50,
+        height: 200,
         borderRadius: 30,
         padding: 10,
         alignItems: 'center',

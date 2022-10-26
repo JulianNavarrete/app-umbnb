@@ -1,22 +1,24 @@
 import React from "react";
-import { View, Text, StyleSheet, TpuchnableOpacity,Button,Alert } from "react-native";
+import { View, Text, StyleSheet, TouchnableOpacity,Button,Alert,ScrollView } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 const Init = () => {
 
     return (
         
-        <View>
+        <ScrollView>
+            
             <Text
                 style={{
                     fontSize: 30,
                     textAlign: "center",
                     marginTop: "20%",
                 }}
-                >hola denuevo</Text>
+                >Ingrese los datos de la propiedad que desea crear</Text>
                 <Button
-                title="Press me"
+                title="Create"
                 onPress={() => Alert.alert('Simple Button pressed')}/> 
-        </View>
+        </ScrollView>
     );
     }
 

@@ -9,20 +9,23 @@ const LoginScreen = () => {
     const Navigation = useNavigation();
 
     return (
-        <View>
+        <ScrollView>
             <Text
                 style={{
                     fontSize: 30,
                     textAlign: "center",
                     marginTop: "20%",
                 }}
-                >Login!!!</Text>
+                >OPTIONS</Text>
                 <ButtonCreateHouse/>
-                <ButtonSearchHouse/>
                 <Button
                     title="Press me"
                     onPress={() => Navigation.navigate('Init')}/> 
-        </View>
+                <ButtonSearchHouse/>
+                <Button
+                    title="Press me"
+                    onPress={() => Navigation.navigate('Menu')}/> 
+        </ScrollView>
     );
     }
 

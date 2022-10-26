@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TpuchnableOpacity } from "react-native";
-
+import { StatusBar } from "expo-status-bar";
 const LoginScreen = () => {
 
     return (

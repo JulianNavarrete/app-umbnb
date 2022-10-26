@@ -43,7 +43,10 @@ function MyTabs() {
                 component={MyStack}
                 options={{
                     tabBarLabel: 'Feed',
-                    tabBarIcon: ({ color, size}) => (
+                    tabBarIcon: ({ 
+                        color, 
+                        size
+                    }) => (
                         <MaterialCommunityIcons name="home" size={24} color="black" />
                     ),
                     headerShown: false,
@@ -54,7 +57,10 @@ function MyTabs() {
                 component={Menu}
                 options={{
                     tabBarLabel: 'Menu',
-                    tabBarIcon: ({ color, size}) => (
+                    tabBarIcon: ({ 
+                        color, 
+                        size
+                    }) => (
                         <MaterialCommunityIcons name="menu" size={24} color="black" />
                     ),
                     headerShown: false,

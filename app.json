@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "app-umbnb",
-    "slug": "app-umbnb",
+    "name": "AppUm",
+    "slug": "AppUm",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -29,6 +29,5 @@
     "web": {
       "favicon": "./assets/favicon.png"
     }
-    
   }
 }

@@ -1,88 +1,73 @@
 import React from "react";
-//importar barra inferior
-import { createBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 //Screens
 import HomeScreen from "./Screens/HomeScreen";
-import Menu from './Screens/Menu';
-import Login from './Screens/Login';
+import Menu  from "./Screens/Menu";
+import LoginScreen from "./Screens/LoginScreen";
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-//logo casita
-//import { Ionicons } from '@expo/vector-icons';
-import MaterialComunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-//logo menu
-//import { Ionicons } from '@expo/vector-icons'; 
-//import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-
-
-
-
-const HomeStacNavigator = createNativeStackNavigator();
-function MyStack(){
+const HomeStackNavigator = createNativeStackNavigator();
+function MyStack() {
     return(
-        <HomeStacNavigator.Navigator
+        <HomeStackNavigator.Navigator
             initialRouteName="HomeScreen"
         >
-            <HomeStacNavigator.Screen
+            <HomeStackNavigator.Screen
                 name="HomeScreen"
                 component={HomeScreen}
-                />
-            <HomeStacNavigator.Screen
+            />
+            <HomeStackNavigator.Screen
                 name="Login"
-                component={Login}
-                options={{
-                    headerBackTitleVisible: false,
-                }}
-                />
-            </HomeStacNavigator.Navigator>     
+                component={LoginScreen}
+            />
+        </HomeStackNavigator.Navigator>
     )
 }
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
-function MyTabs(){
+function MyTabs() {
     return(
-        //pantallas nuevas
-    <Tab.Navigator 
+        <Tab.Navigator
         initialRouteName="Home"
-        screenOptions= {{
+        screenOptions={{
             tabBarActiveTintColor: 'purple',
         }}
-    >
-    <Tab.Screen 
-      name="Home" 
-      component= {MyStack} 
-      options={{
-        tabBarLabel: 'Feed',
-        tabBarIcon:({ color, size}) => (
-            <MaterialComunityIcons name="home" color={color} size={size}/>
-        ),
-        headerShown: false,
-      }}/>
-    <Tab.Screen 
-      name="Menu" 
-      component= {Menu} 
-      options={{
-        tabBarLabel: 'Menu',
-        tabBarIcon:({ color, size}) => (
-            <MaterialCommunityIcons name="menu" color={color} size={24} />
-            
-        ),
-      }}/>
-  </Tab.Navigator>
-//las que faltan van dentro de MENU
+        >
+            <Tab.Screen 
+                name="Home" 
+                component={MyStack}
+                options={{
+                    tabBarLabel: 'Feed',
+                    tabBarIcon: ({ color, size}) => (
+                        <MaterialCommunityIcons name="home" size={24} color="black" />
+                    ),
+                    headerShown: false,
+                }}
+            />
+            <Tab.Screen 
+                name="Menu" 
+                component={Menu}
+                options={{
+                    tabBarLabel: 'Menu',
+                    tabBarIcon: ({ color, size}) => (
+                        <MaterialCommunityIcons name="menu" size={24} color="black" />
+                    ),
+                    headerShown: false,
+                }}
+            />
+        </Tab.Navigator>
     );
 }
 
 export default function Navigation(){
     return(
         <NavigationContainer>
-            <MyTab/>
+            <MyTabs />
         </NavigationContainer>
     );
 }

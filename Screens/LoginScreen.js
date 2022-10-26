@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TpuchnableOpacity } from "react-native";
 
-const Menu = () => {
+const LoginScreen = () => {
 
     return (
         <View>
@@ -11,9 +11,9 @@ const Menu = () => {
                     textAlign: "center",
                     marginTop: "20%",
                 }}
-                >Menu</Text>
+                >Login</Text>
         </View>
     );
     }
 
-export default Menu;
+export default LoginScreen;

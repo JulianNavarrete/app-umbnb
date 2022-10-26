@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, TpuchnableOpacity, Button, Alert, ScrollView  } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+import ButtonCreateHouse from "../components/ButtonCreateHouse";
+import ButtonSearchHouse from "../components/ButtonSearchHouse ";
 
 const LoginScreen = () => {
     const Navigation = useNavigation();
@@ -15,9 +17,11 @@ const LoginScreen = () => {
                     marginTop: "20%",
                 }}
                 >Login!!!</Text>
+                <ButtonCreateHouse/>
+                <ButtonSearchHouse/>
                 <Button
                     title="Press me"
-                    onPress={() => Alert.alert('Button')}/> 
+                    onPress={() => Navigation.navigate('Init')}/> 
         </View>
     );
     }

@@ -58,6 +58,20 @@ function MyTabs() {
                     headerShown: false,
                 }}
             />
+<Tab.Screen 
+                name="Menu" 
+                component={Menu}
+                options={{
+                    tabBarLabel: 'Menu',
+                    tabBarIcon: ({ 
+                        color, 
+                        size
+                    }) => (
+                        <MaterialCommunityIcons name="menu" size={24} color="black" />
+                    ),
+                    headerShown: false,
+                }}
+            />
           
         </Tab.Navigator>
     );

@@ -14,16 +14,16 @@ export default function App() {
         style={styles.textInput}
         autoCapitalize='none'
         autoCompleteType='email'
-        autoCorrect='false'
+        autoCorrect={false}
       />
       <TextInput 
         placeholder="Password"
         style={styles.textInput}
         secureTextEntry={true}
-        autoCorrect='false'
+        autoCorrect={false}
       />
-      <Text style={styles.forgotPassword}>Forgot your password?</Text>
       <ButtonGradient/>
+      <Text style={styles.forgotPassword}>Forgot your password?</Text>
       <Text style={styles.forgotPassword}>Don't have an account?</Text>
       <StatusBar style="auto" />
     </View>
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
   forgotPassword:{
     fontSize: 14,
     marginTop: 20,
+    marginBottom: 15,
     color: 'grey'
   }
 });
